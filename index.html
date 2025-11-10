@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Isabelle - Portfolio Simples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D77FA1',
+                        secondary: '#B799B0',
+                        accent: '#8AB4FF',
+                        neutral: '#6B7280',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Estilos personalizados mínimos para barras de habilidade */
+        .skill-bar {
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 font-sans text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#hero" class="text-2xl font-bold text-primary">Isabelle Alves</a>
+                <ul class="flex items-center gap-8">
+                    <li><a href="#sobre" class="text-neutral hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">Sobre</a></li>
+                    <li><a href="#skills" class="text-neutral hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">Skills</a></li>
+                    <li><a href="#experiencia" class="text-neutral hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">Experiencias</a></li>
+                    <li><a href="#projetos" class="text-neutral hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">Projetos</a></li>
+                    <li><a href="#contato" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="pt-32 pb-20 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="flex-1 text-center md:text-left">
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 leading-tight">
+                            Oi, eu sou a <span class="text-primary">Isabelle</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl text-neutral mb-8 leading-relaxed">
+                            Desenvolvedora Front-end iniciante, focada em HTML Semântico e Tailwind CSS. Busco criar interfaces funcionais e elegantes.
+                        </p>
+                        <div class="flex gap-4 justify-center md:justify-start">
+                            <a href="#projetos" class="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-secondary hover:scale-105 transition-all duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                Meus Trabalhos
+                            </a>
+                            <a href="#contato" class="bg-white text-primary px-8 py-3 rounded-full font-medium hover:bg-gray-50 hover:scale-105 transition-all duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                Entrar em Contato
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="Isabelle.jpeg" alt="" class="w-72 h-72 md:w-80 md:h-80 rounded-full object-cover shadow-2xl border-8 border-white">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="sobre" class="py-20 px-6 bg-white/60 backdrop-blur-sm">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">Sobre Mim</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="flex-shrink-0">
+                        <img src="Isabelle.jpeg" alt="Professional workspace" class="w-64 h-64 rounded-2xl object-cover shadow-xl">
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Sou estudante de 15 anos, moro em Nova Andradina - MS e estudo no Instituto Federal de Mato Grosso do Sul. Estou iniciando na área de desenvolvimento Front-end, com foco em HTML semântico e Tailwind CSS. Gosto de criar interfaces funcionais, modernas e visualmente agradáveis.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="py-20 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">Skills</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+                
+                <!-- Habilidades técnicas -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Habilidades técnicas</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Skill 1 -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-gray-800">HTML & CSS</span>
+                                <span class="text-primary font-semibold">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-primary to-accent h-full rounded-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill 2 -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-gray-800">Tailwind CSS</span>
+                                <span class="text-primary font-semibold">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-primary to-accent h-full rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill 3 -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-gray-800">JavaScript</span>
+                                <span class="text-primary font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-primary to-accent h-full rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- Skill 5 -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-gray-800">Git & GitHub</span>
+                                <span class="text-primary font-semibold">20%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-primary to-accent h-full rounded-full skill-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill 6 -->
+                        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold text-gray-800">Designs Responsivos</span>
+                                <span class="text-primary font-semibold">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-primary to-accent h-full rounded-full skill-bar" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+        <!-- Educação & Experiencias -->
+        <section id="experiencia" class="py-20 px-6 bg-white/60 backdrop-blur-sm">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">Educação & Experiencias</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+                
+                <div class="space-y-8">
+                    <!-- Experience 1 -->
+                    <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-primary">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Curso Pacote Office</h3>
+                            <span class="text-primary font-semibold">2019</span>
+                        </div>
+                        <h4 class="text-lg text-neutral font-medium mb-2">Nova Informatica.</h4>
+                        <p class="text-gray-700 leading-relaxed">Pacote Office (Word, Excel e PowerPoint) — Criação de relatórios, planilhas com fórmulas e apresentações visuais</p>
+                    </article>
+                    
+                    
+                    <!-- Escola -->
+                    <article class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-secondary">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                            <h3 class="text-xl font-bold text-gray-900">Tecnico em Informatica</h3>
+                            <span class="text-secondary font-semibold">2025 - Atual</span>
+                        </div>
+                        <h4 class="text-lg text-neutral font-medium mb-2">Instituto Federal de Mato Grosso do Sul</h4>
+                        <p class="text-gray-700 leading-relaxed">Cursando Tecnico em Informatica.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projetos" class="py-20 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">Projetos</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <article class="bg-white rounded-3xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300">
+                        <img src="https://repository-images.githubusercontent.com/456963513/82528385-a73f-488f-9003-513321283a6b" alt="" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Platforma E-commerce</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Uma plataforma de compras online totalmente responsiva, com navegação intuitiva, filtragem de produtos e uma experiência de finalização de compra simplificada.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">HTML</span>
+                                <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">Tailwind CSS</span>
+                                <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/isayyzks/Projeto-Ecomerce" class="flex-1 bg-primary text-white text-center px-6 py-3 rounded-full font-medium hover:bg-secondary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 2 -->
+                    <article class="bg-white rounded-3xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300">
+                        <img src="https://elements-resized.envatousercontent.com/elements-cover-images/897a3793-d544-475a-9e56-00a46be70d62?w=433&cf_fit=scale-down&q=85&format=auto&s=de0cae3d8607c6829ca3d0682d0993666521fda76512ceba8c27a8c255538b50" alt="" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Painel Meteorológico</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                 Um site de previsão do tempo elegante, com dados em tempo real, belas visualizações e previsões baseadas na localização. Projetado com foco em acessibilidade e experiência do usuário.                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">HTML</span>
+                                <span class="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">CSS</span>
+                                <span class="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/isayyzks/Painel-Meteorol-gico" class="flex-1 bg-primary text-white text-center px-6 py-3 rounded-full font-medium hover:bg-secondary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="py-20 px-6 bg-gradient-to-br from-primary/10 via-purple-50 to-accent/10">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">Vamos trabalhar juntos</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-12 rounded-full"></div>
+                
+                <div class="bg-white rounded-3xl shadow-2xl p-10 md:p-12">
+                    <p class="text-xl text-center text-gray-700 leading-relaxed mb-10">
+                       Estou disponivel para colaborar em novos projetos ou discutir oportunidades. Sinta-se à vontade para entrar em contato por qualquer um dos canais abaixo!                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6 mb-10">
+                        <!-- Email -->
+                        <a href="https://gmail.com/" class="flex items-center gap-4 p-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl hover:from-primary/10 hover:to-accent/10 transition-all duration-300 border-2 border-transparent hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            <div class="bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                                ✉️
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Email</h3>
+                                <p class="text-neutral text-sm">isabellealves4567@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <!-- GitHub -->
+                        <a href="https://github.com/isayyzks" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl hover:from-primary/10 hover:to-accent/10 transition-all duration-300 border-2 border-transparent hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            <div class="bg-gray-800 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                                🐙
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">GitHub</h3>
+                                <p class="text-neutral text-sm">@isayyzks</p>
+                            </div>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/isayyzks" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl hover:from-primary/10 hover:to-accent/10 transition-all duration-300 border-2 border-transparent hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                                💼
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">LinkedIn</h3>
+                                <p class="text-neutral text-sm">linkedin.com/in/isayyzks</p>
+                            </div>
+                        </a>
+                    
+                    <div class="text-center">
+                        <a href="https://gmail.com/" class="inline-block bg-gradient-to-r from-primary to-accent text-white px-10 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            Entre em Contato
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-gray-400">© 2025 Isabelle. Todos Direitos Reservados.</p>
+                <div class="flex gap-6">
+                    <a href="https://github.com/isayyzks" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-900 rounded">GitHub</a>
+                    <a href="https://linkedin.com/in/isayyzks" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-900 rounded">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
